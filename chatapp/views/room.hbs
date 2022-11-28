@@ -1,0 +1,71 @@
+<div class="text-white text-center bg-purple p-3">
+    <h1 class="title">ワードウルフ ルーム</h1>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <form method="post" action="/">
+
+            <div class="room-login_user">
+                ログインユーザ：{{ userName }}さん
+                <input id="userName" type="hidden" value={{ userName }}>
+            </div>
+
+
+            <div class="room-thread">
+                <div id="thread"></div>
+            </div>
+            
+
+            <div class="input-group">
+                
+                <div class="d-flex align-items-center">
+                    <textarea class="form-control" id="message" cols="40" rows="3"  placeholder="投稿文を入力してください" aria-label="" aria-describedby="inputGroup-sizing"></textarea>
+                </div>
+                <div class="input-group-apppend">
+                    <div class="btn-wrapper">
+                        <input type="button" value="投稿" class="btn btn-primary" onclick="publish();">
+                        <input type="button" value="メモ" class="btn btn-secondary" onclick="memo();">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="room-vote">
+                <input type="button" value="投票する" id="voteAction" class="btn btn-info" onclick="openModal();">
+                <label id="voted_text"></label>
+
+                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content" style="margin-top:150px">
+                    <div class="modal-header">
+                        <label>ウルフだと思うプレイヤーに投票してください</label>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="radio" id="firstRadio" name="wolf" value="Player1"><label id="firstUser">プレイヤー1</label>
+                        <input type="radio" id="secondRadio" name="wolf" value="Player2"><label id="secondUser">プレイヤー2</label>
+                        <input type="radio" id="thirdRadio" name="wolf" value="Player3"><label id="thirdUser">プレイヤー3</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="vote();">Vote</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="room-exit">
+                <input id="btn_back" type="button" value="退室する" class="btn btn-danger" onclick="exit();">
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/javascripts/socket.js"></script>
+<script src="/javascripts/enter.js"></script>
+<script src="/javascripts/publish.js"></script>
+<script src="/javascripts/memo.js"></script>
+<script src="/javascripts/exit.js"></script>
+<script src="/javascripts/vote.js"></script>

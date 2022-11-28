@@ -1,0 +1,125 @@
+/*
+ * 画面全体に関する設定
+ */
+body {
+    font: 14px "Lucida Grande", Meiryo, Helvetica, Arial, sans-serif;
+}
+
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: #00B7FF;
+}
+
+div {
+    margin: 20px 0px;
+}
+
+.bg-purple {
+    margin-top: 0px;
+    background-color: #4B0082;
+}
+
+.title {
+    color: #ffffff;
+}
+
+.row {
+    margin: 20px;
+}
+
+/*
+ * ボタンの共通設定
+ */
+.common-button {
+    
+}
+
+/*
+ * トップ画面（index.hbs）に関する設定
+ */
+.index-user_name {
+
+}
+
+.index-user_name_text {
+    width: 200px;
+}
+
+.index-enter {
+
+}
+
+.index-enter_button {
+
+}
+
+/*
+ * チャットルーム画面（room.hbs）に関する設定
+ */
+.room-login_user {
+
+}
+
+.btn-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start; /* ADD */
+}
+
+.room-message {
+
+}
+
+.room-message_textarea {
+    width: 500px;
+}
+
+.room-submit {
+
+}
+
+.room-publish_button {
+
+}
+
+.room-memo_button {
+
+}
+
+.room-thread {
+    width:480px;
+    height:300px;
+
+    border-top:2px solid #171717;
+    border-bottom:2px solid #171717;
+
+    overflow:scroll;
+}
+
+.room-exit {
+
+}
+
+.room-exit_button {
+
+}
+
+.message {
+    margin: 0px;
+}
+
+.user {
+    display: inline-block;
+    margin-right: 5px; 
+    vertical-align: top;
+}
+
+.content {
+    display: inline-block;
+    vertical-align: top;
+}
